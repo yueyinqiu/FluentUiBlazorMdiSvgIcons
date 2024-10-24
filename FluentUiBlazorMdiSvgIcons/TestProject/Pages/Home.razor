@@ -1,0 +1,14 @@
+﻿@page "/"
+@using System.Reflection
+
+<PageTitle>Home</PageTitle>
+
+<div>
+    <FluentButton OnClick="@RandomIcon">
+        Current: @parameters
+    </FluentButton>
+</div>
+
+<div>
+    <FluentIcon Value="@this.icon"></FluentIcon>
+</div>
