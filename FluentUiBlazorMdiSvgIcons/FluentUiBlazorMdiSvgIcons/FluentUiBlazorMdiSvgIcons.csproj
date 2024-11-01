@@ -9,7 +9,7 @@
 		<RootNamespace>$(AssemblyName)</RootNamespace>
 		<IsTrimmable>true</IsTrimmable>
 
-		<Version>0.0.2</Version>
+		<Version>0.0.3</Version>
 		<PackageId>$(AssemblyName)</PackageId>
 		<RepositoryUrl>https://github.com/yueyinqiu/FluentUiBlazorMdiSvgIcons.git</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
@@ -17,6 +17,13 @@
 		<Authors>yueyinqiu</Authors>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="wwwroot\**" />
+	  <Content Remove="wwwroot\**" />
+	  <EmbeddedResource Remove="wwwroot\**" />
+	  <None Remove="wwwroot\**" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<None Include="../../README.md">
@@ -31,10 +38,6 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.10.2" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Folder Include="wwwroot\" />
 	</ItemGroup>
 
 </Project>

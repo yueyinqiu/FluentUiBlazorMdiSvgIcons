@@ -40,7 +40,7 @@ foreach(var file in svgFiles)
     path = pathSplit[1];
     path = SymbolDisplay.FormatLiteral(path, true);
 
-    output.WriteLine($"    public static Icon {fileName}(IconVariant iconVariant, IconSize iconSize) {{ return new(\"{fileName}\", iconVariant, iconSize, {path}); }}");
+    output.WriteLine($"    public static Icon {fileName} => new(\"{fileName}\", IconVariant.Regular, IconSize.Size24, {path});");
 }
 
 output.WriteLine("}");
